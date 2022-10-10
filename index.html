@@ -1,44 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Tip calculator app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="card.css">
+  <link rel="stylesheet" href="tip_button.css">
+  <link rel="stylesheet" href="input_text.css">
+  <script src="index.js" defer></script>
 </head>
-<body>
 
-  Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+<div class="container">
+    <body>
+      <div class="title">
+        <img src="images/logo.svg" alt="" srcset="">
+      </div>
+    <div class="card">
+      <div class="card-cell">
+        <div class="card-cell-component">
+          <div class="card-cell-title">
+            Bill
+          </div>
+          <input type="number" name="" id="bill">
+        </div>
+        <div class="card-cell-component">
+          <div class="card-cell-title">
+            Select Tip %
+          </div>
+          <div class="tip-buttons">
+            <div>
+              <input type="radio" name="tip" id="tip-5" value="5">
+              <label for="tip-5" class="tip-num-label">5%</label>
+            </div>
+            <div>
+              <input type="radio" name="tip" id="tip-10" value="10">
+              <label for="tip-10" class="tip-num-label">10%</label>
+            </div>
+            <div>
+              <input type="radio" name="tip" id="tip-15" value="15">
+              <label for="tip-15" class="tip-num-label">15%</label>
+            </div>
+            <div>
+              <input type="radio" name="tip" id="tip-25" value="25">
+              <label for="tip-25" class="tip-num-label">25%</label>
+            </div>
+            <div>
+              <input type="radio" name="tip" id="tip-50" value="50">
+              <label for="tip-50" class="tip-num-label">50%</label>
+            </div>
+            <div>
+              <input type="number" name="tip" id="tip-custom" placeholder="Custom">
+            </div>
+          </div>
+        </div>
+        <div class="card-cell-component">
+          <div class="card-cell-title">
+            Number of People
+          </div>
+          <input type="number" name="" id="number-of-people">
+        </div>
+      </div>
+      <div class="card-cell tip-result-cell">
+        <div class="card-cell-component">
+          <div class="show-result">
+            <div class="show-result-left">
+              <div class="result-title">Tip Amount</div>
+              <div class="result-subtitle">/ person</div>
+            </div>
+            <div class="show-result-right" id="result-tip-amount"></div>
+          </div>
+          <div class="show-result">
+            <div class="show-result-left">
+              <div class="result-title">Total</div>
+              <div class="result-subtitle">/ person</div>
+            </div>
+            <div class="show-result-right" id="result-total"></div>
+          </div>
+        </div>
+        <div class="card-cell-component">
+          <button id="reset">RESET</button>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
+
 </html>
