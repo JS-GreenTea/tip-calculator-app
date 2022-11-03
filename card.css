@@ -21,8 +21,14 @@
 }
 
 .card-cell-title {
+  display: flex;
+  justify-content: space-between;
   font-size: 1rem;
   margin-bottom: 0.2rem;
+}
+
+.card-cell-title .error-alert {
+  color: #8f3610;
 }
 
 .tip-result-cell {

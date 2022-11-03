@@ -35,33 +35,34 @@
           </div>
           <div class="tip-buttons">
             <div>
-              <input type="radio" name="tip" id="tip-5" value="5">
+              <input type="radio" name="tip" id="tip-5" value="0.05">
               <label for="tip-5" class="tip-num-label">5%</label>
             </div>
             <div>
-              <input type="radio" name="tip" id="tip-10" value="10">
+              <input type="radio" name="tip" id="tip-10" value="0.1">
               <label for="tip-10" class="tip-num-label">10%</label>
             </div>
             <div>
-              <input type="radio" name="tip" id="tip-15" value="15">
+              <input type="radio" name="tip" id="tip-15" value="0.15">
               <label for="tip-15" class="tip-num-label">15%</label>
             </div>
             <div>
-              <input type="radio" name="tip" id="tip-25" value="25">
+              <input type="radio" name="tip" id="tip-25" value="0.25">
               <label for="tip-25" class="tip-num-label">25%</label>
             </div>
             <div>
-              <input type="radio" name="tip" id="tip-50" value="50">
+              <input type="radio" name="tip" id="tip-50" value="0.5">
               <label for="tip-50" class="tip-num-label">50%</label>
             </div>
             <div>
-              <input type="number" name="tip" id="tip-custom" placeholder="Custom">
+              <input type="number" id="tip-custom" placeholder="Custom">
             </div>
           </div>
         </div>
         <div class="card-cell-component">
           <div class="card-cell-title">
             Number of People
+            <div class="error-alert" id="number-of-people-error" style="display: none;">Can't be zero</div>
           </div>
           <input type="number" name="" id="number-of-people">
         </div>
@@ -73,14 +74,14 @@
               <div class="result-title">Tip Amount</div>
               <div class="result-subtitle">/ person</div>
             </div>
-            <div class="show-result-right" id="result-tip-amount"></div>
+            <div class="show-result-right" id="result-tip-amount">0.00</div>
           </div>
           <div class="show-result">
             <div class="show-result-left">
               <div class="result-title">Total</div>
               <div class="result-subtitle">/ person</div>
             </div>
-            <div class="show-result-right" id="result-total"></div>
+            <div class="show-result-right" id="result-total">0.00</div>
           </div>
         </div>
         <div class="card-cell-component">
