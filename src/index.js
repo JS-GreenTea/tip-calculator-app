@@ -1,7 +1,9 @@
 const billInput = document.querySelector("#bill-input");
 const tipAmountResult = document.querySelector("#tip-amount-result");
 const totalResult = document.querySelector("#total-result");
+const percentRadioBtns = document.querySelectorAll(".percent-radio-btn");
 let bill = 0;
+let people = 0;
 
 const renderWarningStatus = () => {
   // some logic...
@@ -21,6 +23,11 @@ const render = () => {
 
 const onChangeBill = (e) => {
   bill = e.target.value;
+  render();
+};
+
+const onChangePeople = (e) => {
+  people = e.target.value;
   render();
 };
 
