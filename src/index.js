@@ -5,6 +5,7 @@ const totalResult = document.querySelector("#total-result");
 const percentRadioBtns = document.querySelectorAll(".percent-radio-btn");
 let bill = 0;
 let people = 0;
+let tipPercent = 0;
 
 const renderWarningStatus = () => {
   // some logic...
@@ -22,6 +23,7 @@ const render = () => {
   }
   console.log("bill:", bill);
   console.log("people:", people);
+  console.log("tip:", tipPercent);
 };
 
 const onChangeBill = (e) => {
@@ -34,5 +36,13 @@ const onChangePeople = (e) => {
   render();
 };
 
+const onChangePercentRadio = (e) => {
+  tipPercent = +e.target.value;
+  render();
+};
+
 billInput.addEventListener("change", onChangeBill);
 peopleInput.addEventListener("change", onChangePeople);
+for (const percentRadioBtn of percentRadioBtns) {
+  percentRadioBtn.addEventListener("change", onChangePercentRadio);
+}
