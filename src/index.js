@@ -6,6 +6,7 @@ const percentRadioBtns = document.querySelectorAll(".percent-radio-btn");
 let bill = 0;
 let people = 0;
 let tipPercent = 0;
+let tipPerPeople = 0;
 
 const renderWarningStatus = () => {
   // some logic...
@@ -21,6 +22,11 @@ const render = () => {
     // handle bad input ...
     console.log("bad bill input!");
   }
+  calcResult();
+  renderTipPerPeople();
+};
+
+const printState = () => {
   console.log("bill:", bill);
   console.log("people:", people);
   console.log("tip:", tipPercent);
@@ -39,6 +45,18 @@ const onChangePeople = (e) => {
 const onChangePercentRadio = (e) => {
   tipPercent = +e.target.value;
   render();
+};
+
+const calcResult = () => {
+  calcTipPerPeople();
+};
+
+const calcTipPerPeople = () => {
+  tipPerPeople = (bill * tipPercent) / people;
+};
+
+const renderTipPerPeople = () => {
+  tipAmountResult.innerText = tipPerPeople;
 };
 
 billInput.addEventListener("change", onChangeBill);
