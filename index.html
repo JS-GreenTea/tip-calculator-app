@@ -14,8 +14,8 @@
 </head>
 <body>
 
-  Bill
-  <input placeholder="Bill"/>
+  <p>Bill</p>
+  <input id="bill-input" placeholder="Bill"/>
   Select Tip %
   <div>5%</div>
   <div>10%</div>
@@ -24,14 +24,16 @@
   <div>50%</div>
   <div>Custom</div>
 
-  Number of People
-  <div>0</div>
-  Tip Amount
-  / person
-<div>0.00</div>
-  Total
-  / person
-  <div>0.00</div>
+  <p>Number of People</p>
+  <input id="people-input">
+  <p>Tip Amount</p>
+  <p>/ person</p>
+<div id="tip-amount-result">0.00</div>
+  <p>Total</p>
+  <p>/ person</p>
+  <div id="total-result">0.00</div>
   <input type="button" value="Reset"/> 
 </body>
+<script src="./src/index.js"></script>
+
 </html>
