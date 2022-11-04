@@ -7,6 +7,7 @@ let bill = 0;
 let people = 0;
 let tipPercent = 0;
 let tipPerPeople = 0;
+let total = 0;
 
 const renderWarningStatus = () => {
   // some logic...
@@ -24,6 +25,7 @@ const render = () => {
   }
   calcResult();
   renderTipPerPeople();
+  renderTotal();
 };
 
 const printState = () => {
@@ -49,6 +51,7 @@ const onChangePercentRadio = (e) => {
 
 const calcResult = () => {
   calcTipPerPeople();
+  calcTotal();
 };
 
 const calcTipPerPeople = () => {
@@ -57,6 +60,14 @@ const calcTipPerPeople = () => {
 
 const renderTipPerPeople = () => {
   tipAmountResult.innerText = tipPerPeople;
+};
+
+const calcTotal = () => {
+  total = bill / people;
+};
+
+const renderTotal = () => {
+  totalResult.innerText = total;
 };
 
 billInput.addEventListener("change", onChangeBill);
