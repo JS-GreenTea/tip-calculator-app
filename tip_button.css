@@ -1,0 +1,49 @@
+input[type="radio"] {
+  display: none;
+}
+
+.tip-buttons {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.tip-buttons > div {
+  text-align: center;
+  width: calc(100% / 3 - 0.5rem);
+  min-width: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.tip-buttons > div >label:hover {
+  cursor: pointer;
+  background-color: var(--light-grayish-cyan);
+  color: var(--very-dark-cyan);
+}
+
+.tip-buttons > div > label { 
+  display: inline-block;
+  background-color:var(--very-dark-cyan);
+  color: var(--very-light-grayish-cyan);
+  border-radius: 0.3rem;
+  width: 100%;
+  padding: 0.5rem 0;
+}
+
+.tip-buttons input[type="radio"]:checked + label {
+  background-color: var(--strong-cyan);
+  color: var(--very-dark-cyan);
+}
+
+.tip-result-cell button:hover{
+  cursor: pointer;
+  background-color: var(--light-grayish-cyan);
+  color: var(--very-dark-cyan);
+}
+
+@media (max-width: 375px) {
+  .tip-buttons > div {
+    width: calc(100% / 2 - 0.5rem);
+  }  
+}
