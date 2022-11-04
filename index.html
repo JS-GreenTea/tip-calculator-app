@@ -17,13 +17,26 @@
   <p>Bill</p>
   <input id="bill-input" placeholder="Bill"/>
   Select Tip %
-  <div>5%</div>
-  <div>10%</div>
-  <div>15%</div>
-  <div>25%</div>
-  <div>50%</div>
-  <div>Custom</div>
-
+  <div id="tip-percent-container"> 
+    <label>
+      5% <input class="percent-radio-btn" type="radio" name="percent" value="0.05"/>  
+    </label>
+    <label>
+      10% <input class="percent-radio-btn" type="radio" name="percent" value="0.1"/>
+    </label>
+    <label>
+      15% <input class="percent-radio-btn" type="radio" name="percent" value="0.15"/>
+    </label>
+    <label>
+      25% <input class="percent-radio-btn" type="radio" name="percent" value="0.25"/>
+    </label>
+    <label>
+      50% <input class="percent-radio-btn" type="radio" name="percent" value="0.5"/>
+    </label>
+    <label>
+      <input id="custom-tip-input" type="text" ><input class="percent-radio-btn" type="radio" name="percent" value=""/>
+    </label>
+  </div>
   <p>Number of People</p>
   <input id="people-input">
   <p>Tip Amount</p>
