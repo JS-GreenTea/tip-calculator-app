@@ -39,7 +39,8 @@ body {
   flex-direction: column;
   justify-content: center;
 }
-input {
+.bill,
+.number {
   margin: 10px 0 20px 0;
   border: none;
   background-color: hsl(189, 41%, 97%);
@@ -47,6 +48,14 @@ input {
   width: 300px;
   height: 35px;
   text-align: right;
+}
+
+input:hover {
+  border: hsl(185, 41%, 84%);
+}
+button:hover {
+  background-color: hsl(185, 41%, 84%);
+  color: hsl(183, 100%, 15%);
 }
 .select-btn {
   display: grid;
@@ -64,7 +73,12 @@ button {
   background-color: hsl(183, 100%, 15%);
   color: hsl(189, 41%, 97%);
 }
-button:nth-child(6) {
+.custom {
+  margin-top: 3%;
+  border: none;
+  border-radius: 5px;
+  height: 30px;
+  width: 80px;
   background-color: hsl(189, 41%, 97%);
   color: hsl(183, 100%, 15%);
 }
@@ -82,5 +96,5 @@ button:nth-child(6) {
 .reset button {
   color: hsl(183, 100%, 15%);
   background-color: hsl(186, 14%, 43%);
-  width: 100px;
+  width: 300px;
 }
