@@ -1,9 +1,9 @@
-const tipRatio = document.querySelector(".tip-ratio");
-const totalRatio = document.querySelector(".total-ratio");
+const tipAmount = document.querySelector(".tip-amount");
+const totalAmount = document.querySelector(".total-amount");
 const inputBill = document.querySelector(".bill");
 const selectBtn = document.querySelectorAll("button");
 const peopleNum = document.querySelector(".number");
-const resetBtn = document.querySelector(".reset");
+const resetBtn = document.querySelector(".reset-btn");
 const ifZero = document.querySelector(".if-zero");
 const customTip = document.querySelector(".custom");
 let selectTip;
@@ -51,15 +51,15 @@ function showResult() {
   decideZero();
   tipCalc = (Number(inputBill.value) * selectTip) / peopleNum.value;
   totalCalc = Number(inputBill.value) / peopleNum.value + tipCalc;
-  tipRatio.innerText = `$${tipCalc.toFixed(2)}`;
-  totalRatio.innerText = `$${totalCalc.toFixed(2)}`;
+  tipAmount.innerText = `$${tipCalc.toFixed(2)}`;
+  totalAmount.innerText = `$${totalCalc.toFixed(2)}`;
 }
 
 function reset() {
   inputBill.value = null;
   peopleNum.value = null;
-  tipRatio.innerText = "$0.00";
-  totalRatio.innerText = "$0.00";
+  tipAmount.innerText = "$0.00";
+  totalAmount.innerText = "$0.00";
 }
 
 for (let i = 0; i < selectBtn.length; i++) {
