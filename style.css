@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans&family=Nanum+Gothic&display=swap");
+
+body {
+  background-color: hsl(185, 41%, 84%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 700;
+  color: hsl(186, 14%, 43%);
+}
+.top-content {
+  letter-spacing: 8px;
+}
+.top-content:nth-child(1) {
+  margin-top: 5%;
+}
+.container {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: row;
+  width: 800px;
+  height: 400px;
+  background-color: white;
+  border-radius: 20px;
+}
+.result {
+  margin: 30px 30px 30px 30px;
+  background-color: hsl(183, 100%, 15%);
+  color: white;
+  width: 400px;
+  height: 340px;
+  border-radius: 20px;
+}
+.input-content {
+  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+input {
+  margin: 10px 0 20px 0;
+  border: none;
+  background-color: hsl(189, 41%, 97%);
+  color: hsl(184, 14%, 56%);
+  width: 300px;
+  height: 35px;
+  text-align: right;
+}
+.select-btn {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+}
+.select-btn button {
+  width: 80px;
+  margin: 5px 8px 5px 0;
+}
+button {
+  border: none;
+  border-radius: 5px;
+  height: 30px;
+  background-color: hsl(183, 100%, 15%);
+  color: hsl(189, 41%, 97%);
+}
+button:nth-child(6) {
+  background-color: hsl(189, 41%, 97%);
+  color: hsl(183, 100%, 15%);
+}
+.tip-content,
+.total-content {
+  color: hsl(185, 41%, 84%);
+  font-size: 10px;
+}
+.first,
+.second {
+  display: flex;
+  flex-direction: row;
+}
+
+.reset button {
+  color: hsl(183, 100%, 15%);
+  background-color: hsl(186, 14%, 43%);
+  width: 100px;
+}
