@@ -42,7 +42,7 @@ const onBillChange = (e) => {
   }
 };
 
-const onTipRatioChange = (e) => {
+const onTipRatioClick = (e) => {
   tipRatioInputs.forEach((tipRatioInput) => {
     tipRatioInput.classList.remove("selected");
   });
@@ -101,7 +101,7 @@ const onResetButtonClick = (e) => {
 
 billInput.addEventListener("keyup", onBillChange);
 tipRatioInputs.forEach((tipRatioInput) => {
-  tipRatioInput.addEventListener("click", onTipRatioChange);
+  tipRatioInput.addEventListener("click", onTipRatioClick);
 });
 customTipRatioInput.addEventListener("keyup", onCustomTipRatioChange);
 peopleInput.addEventListener("keyup", onPeopleChange);
