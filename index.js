@@ -1,7 +1,12 @@
 const billInput = document.querySelector(".bill-input");
+const billAlert = document.querySelector(".bill-alert");
+
 const tipRatioInputs = document.querySelectorAll(".select-tip-button");
 const customTipRatioInput = document.querySelector(".custom-tip-input");
+
 const peopleInput = document.querySelector(".people-input");
+const peopleAlert = document.querySelector(".people-alert");
+
 const tipPerPersonOutput = document.querySelector(".tip-per-person");
 const totalPerPersonOutput = document.querySelector(".total-per-person");
 const resetButton = document.querySelector(".reset-button");
@@ -22,26 +27,29 @@ const calculate = () => {
 
   tipPerPersonOutput.innerHTML = `$ ${tipPerPerson.toFixed(2)}`;
   totalPerPersonOutput.innerHTML = `$ ${totalPerPerson.toFixed(2)}`;
-
-  console.log(bill, tipRatio, people, tipPerPerson, totalPerPerson);
 };
 
 const onBillChange = (e) => {
-  bill = e.target.value;
+  if (e.target.value === "0") {
+    billAlert.style.visibility = "visible";
+    e.target.style.border = "1px solid red";
+  } else {
+    billAlert.style.visibility = "hidden";
+    e.target.style.border = "none";
 
-  calculate();
+    bill = Number(e.target.value);
+    calculate();
+  }
 };
 
 const onTipRatioChange = (e) => {
   tipRatioInputs.forEach((tipRatioInput) => {
     tipRatioInput.classList.remove("selected");
   });
-
   customTipRatioInput.value = null;
 
   e.target.classList.add("selected");
-  tipRatio = e.target.value;
-
+  tipRatio = Number(e.target.value);
   calculate();
 };
 
@@ -50,15 +58,21 @@ const onCustomTipRatioChange = (e) => {
     tipRatioInput.classList.remove("selected");
   });
 
-  tipRatio = e.target.value;
-
+  tipRatio = Number(e.target.value);
   calculate();
 };
 
 const onPeopleChange = (e) => {
-  people = e.target.value;
+  if (e.target.value === "0") {
+    peopleAlert.style.visibility = "visible";
+    e.target.style.border = "1px solid red";
+  } else {
+    peopleAlert.style.visibility = "hidden";
+    e.target.style.border = "none";
 
-  calculate();
+    people = Number(e.target.value);
+    calculate();
+  }
 };
 
 const onResetButtonClick = (e) => {
@@ -69,19 +83,26 @@ const onResetButtonClick = (e) => {
   totalPerPerson = 0;
 
   billInput.value = null;
+  billInput.style.border = "none";
+  billAlert.style.visibility = "hidden";
+
   tipRatioInputs.forEach((tipRatioInput) => {
     tipRatioInput.classList.remove("selected");
   });
   customTipRatioInput.value = null;
+
   peopleInput.value = null;
+  peopleInput.style.border = "none";
+  peopleAlert.style.visibility = "hidden";
+
   tipPerPersonOutput.innerHTML = "$ 0.00";
   totalPerPersonOutput.innerHTML = "$ 0.00";
 };
 
-billInput.addEventListener("change", onBillChange);
+billInput.addEventListener("keyup", onBillChange);
 tipRatioInputs.forEach((tipRatioInput) => {
   tipRatioInput.addEventListener("click", onTipRatioChange);
 });
-customTipRatioInput.addEventListener("change", onCustomTipRatioChange);
-peopleInput.addEventListener("change", onPeopleChange);
+customTipRatioInput.addEventListener("keyup", onCustomTipRatioChange);
+peopleInput.addEventListener("keyup", onPeopleChange);
 resetButton.addEventListener("click", onResetButtonClick);
