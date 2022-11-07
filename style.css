@@ -213,9 +213,7 @@ button {
 
   .input-section {
     width: calc(100vw - 60px);
-  }
-
-  .input-title {
+    margin-bottom: 0;
   }
 }
 
