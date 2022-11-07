@@ -8,37 +8,45 @@
   
   <title>Frontend Mentor | Tip calculator app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    
   </style>
 </head>
 <body>
 
-  Bill
-
+  <p>Bill</p>
+  <input id="bill-input" placeholder="Bill"/>
   Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <div id="tip-percent-container"> 
+    <label>
+      5% <input class="percent-radio-btn" type="radio" name="percent" value="0.05"/>  
+    </label>
+    <label>
+      10% <input class="percent-radio-btn" type="radio" name="percent" value="0.1"/>
+    </label>
+    <label>
+      15% <input class="percent-radio-btn" type="radio" name="percent" value="0.15"/>
+    </label>
+    <label>
+      25% <input class="percent-radio-btn" type="radio" name="percent" value="0.25"/>
+    </label>
+    <label>
+      50% <input class="percent-radio-btn" type="radio" name="percent" value="0.5"/>
+    </label>
+    <label>
+      <input id="custom-tip-input" type="text" ><input class="percent-radio-btn" type="radio" name="percent" value=""/>
+    </label>
   </div>
+  <p>Number of People</p>
+  <input id="people-input">
+  <p>Tip Amount</p>
+  <p>/ person</p>
+<div id="tip-amount-result">0.00</div>
+  <p>Total</p>
+  <p>/ person</p>
+  <div id="total-result">0.00</div>
+  <input type="button" value="Reset"/> 
 </body>
+<script src="./src/index.js"></script>
+
 </html>
