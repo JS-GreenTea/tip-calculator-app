@@ -1,69 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <title>Frontend Mentor | Tip calculator app</title>
+    <title>Frontend Mentor | Tip calculator app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-<div class="container">
-  <div class="logo-section">
-    <img src="images/logo.svg" />
-  </div>
-  <div class="calculator-section">
-    <div class="input-section">
-      <div class="input-title">Bill</div>
-      <input type="text" class="calculator-input bill-input" placeholder="0" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/>
-
-      <div class="input-title">Select Tip %</div>
-      <div class="select-tip-section">
-        <button class="select-tip-button" value="5" state="selected">5%</button>
-        <button class="select-tip-button" value="10">10%</button>
-        <button class="select-tip-button" value="15">15%</button>
-        <button class="select-tip-button" value="25">25%</button>
-        <button class="select-tip-button" value="50">50%</button>
-        <input type="text" class="custom-tip-input" placeholder="Custom" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo-section">
+        <img src="images/logo.svg" />
       </div>
+      <div class="calculator-section">
+        <div class="input-section">
+          <div class="input-title">Bill</div>
+          <input
+            type="text"
+            class="calculator-input bill-input"
+            placeholder="0"
+            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+          />
 
-      <div class="input-title">Number of People</div>
-      <input type="text" class="calculator-input people-input" placeholder="0" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/>
-    </div>
-    <div class="result-section">
-
-      <div class="tip-result-section">
-        <div class="tip-result-row">
-          <div class="result-title-box">
-            <div class="result-title">Tip Amount</div>
-            <div class="result-subtitle">/ person</div>
+          <div class="input-title">Select Tip %</div>
+          <div class="select-tip-section">
+            <button class="select-tip-button" value="0.05">5%</button>
+            <button class="select-tip-button" value="0.10">10%</button>
+            <button class="select-tip-button" value="0.15">15%</button>
+            <button class="select-tip-button" value="0.25">25%</button>
+            <button class="select-tip-button" value="0.50">50%</button>
+            <input
+              type="text"
+              class="custom-tip-input"
+              placeholder="Custom"
+              oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+            />
           </div>
-          <div class="tip-result">$ 0.00</div>
-        </div>
 
-        <div class="tip-result-row">
-          <div class="result-title-box">
-            <div class="result-title">Total</div>
-            <div class="result-subtitle">/ person</div>
-         </div>
-          <div class="tip-result">$ 0.00</div>
+          <div class="input-title">Number of People</div>
+          <input
+            type="text"
+            class="calculator-input people-input"
+            placeholder="0"
+            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+          />
+        </div>
+        <div class="result-section">
+          <div class="tip-result-section">
+            <div class="tip-result-row">
+              <div class="result-title-box">
+                <div class="result-title">Tip Amount</div>
+                <div class="result-subtitle">/ person</div>
+              </div>
+              <div class="tip-result tip-per-person">$ 0.00</div>
+            </div>
+
+            <div class="tip-result-row">
+              <div class="result-title-box">
+                <div class="result-title">Total</div>
+                <div class="result-subtitle">/ person</div>
+              </div>
+              <div class="tip-result total-per-person">$ 0.00</div>
+            </div>
+          </div>
+
+          <button class="reset-button">RESET</button>
         </div>
       </div>
-
-      <button class="reset-button">RESET</button>
     </div>
-  </div>
-</div>
-</body>
+  </body>
+  <script src="index.js"></script>
 </html>
