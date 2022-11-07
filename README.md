@@ -1,9 +1,9 @@
 # Frontend Mentor - Tip calculator app
 
-- [ ] html, css 레이아웃
-  - [ ] 반응형 디자인
-  - [ ] 입력창
-  - [ ] 결과창
+- [x] html, css 레이아웃
+  - [x] 반응형 디자인
+  - [x] 입력창
+  - [x] 결과창
 - [ ] tip 계산
 
 ![Design preview for the Tip calculator app coding challenge](./design/desktop-preview.jpg)
